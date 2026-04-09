@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/sponsor-accounts/_next/static/*"
-  to = "/_next/static/:splat"
-  status = 200
-  force = true
