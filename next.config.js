@@ -1,11 +1,6 @@
-const path = require('path');
-
 /**
- * Hardcoded i18n for latency / cache-key testing.
- * URL shape: default locale has no prefix, e.g. /sponsor-accounts/
- *
- * For deployment behind a path + CDN asset prefix, set `assetPrefix` and add
- * Netlify (or proxy) rewrites from `/your-prefix/_next/*` to `/_next/*`.
+ * Hardcoded i18n for latency / cache-key testing (revert to generateCpZoneI18nConfigUnifiedDomain for production).
+ * Same URL shape as unified domain: lowercase locale segment, e.g. /de-de/sponsor-accounts/
  */
 const i18nConfig = {
   localeDetection: false,
@@ -15,14 +10,14 @@ const i18nConfig = {
 };
 
 module.exports = {
-  // Standalone app: avoid picking a parent directory when other lockfiles exist nearby.
-  outputFileTracingRoot: path.join(__dirname),
   trailingSlash: true,
   basePath: '',
-  // Empty so `next dev` and `next start` serve `/_next/static/*` correctly.
-  assetPrefix: '',
+  assetPrefix: '/sponsor-accounts',
   eslint: { ignoreDuringBuilds: true },
+  // Disable public sourcemaps to prevent exposing source code in production
+  // Sourcemaps are still generated for Datadog upload but not served publicly
   productionBrowserSourceMaps: false,
+
   i18n: i18nConfig,
   experimental: { cpus: 1 },
 };
