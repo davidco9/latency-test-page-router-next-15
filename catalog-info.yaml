@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: latency-test-page-router-next-15
+  description: Standalone Next.js 15 Pages Router latency / routing test app
+  tags:
+    - typescript
+    - nextjs
+spec:
+  type: website
+  lifecycle: experimental
+  owner: unknown
+  system: playground

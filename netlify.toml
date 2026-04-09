@@ -1,0 +1,6 @@
+# Optional: if you set `assetPrefix` in next.config.js to a path prefix, add:
+# [[redirects]]
+#   from = "/your-prefix/_next/static/*"
+#   to = "/_next/static/:splat"
+#   status = 200
+#   force = true

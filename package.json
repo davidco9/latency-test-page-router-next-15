@@ -1,0 +1,40 @@
+{
+  "name": "latency-test-page-router-next-15",
+  "version": "0.0.0",
+  "description": "Standalone Next.js 15 Pages Router app for latency / i18n / routing experiments",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev -p 3051",
+    "start": "next start -p 3051",
+    "lint": "next lint",
+    "check-types": "tsc --noEmit",
+    "test": "jest --passWithNoTests",
+    "test:watch": "cross-env NODE_ENV=test jest --watch"
+  },
+  "dependencies": {
+    "@fontsource/open-sans": "4.5.2",
+    "next": "15.5.9",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.16.2",
+    "@testing-library/react": "14.0.0",
+    "@testing-library/user-event": "14.0.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.8.7",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "cross-env": "7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.5.9",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "typescript": "~5.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "pnpm@10.28.2"
+}
